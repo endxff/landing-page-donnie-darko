@@ -1,0 +1,120 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../../dist/images/image-hero.png);
+    background-size: cover;
+    margin-top: -100px;
+
+    @media (max-width: 768px) {
+        background-image: url(../../dist/images/image-hero-mobile.png);
+        background-repeat: no-repeat;
+    }
+
+    &__content {
+        max-width: 640px;   
+        
+        @media (max-width: 768px) {
+            max-width: 350px;
+        }
+            
+        h3 {
+            padding-top: 6em;
+            text-align: center;
+            font-weight: 500;
+
+            @media (max-width: 768px) {
+                max-width: 200px;
+            }
+        }
+
+        p {
+            @media (max-width: 768px) {
+                max-width: 200px;
+            }
+        }
+
+        .details {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 768px) {
+                display: block;
+                margin-top: 40%;
+            }
+            
+            span {
+                padding: 8px;
+            }
+            
+            img {
+                width: 24px;
+            }
+        }
+        
+        .genres {
+            ul {
+                text-align: center;
+                margin-top: 8px;
+                li {
+                    display: inline;
+                    padding: 8px;
+                }
+            }
+        }
+    }
+    
+    &__photos {
+        display: flex;
+        margin-top: 2em;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+        
+        &__card {
+            opacity: 1;
+            transition: opacity .9s ease-in;
+
+            &--hidden {
+                transition: opacity .9s ease-out;
+                opacity: 0;
+            }
+
+            &:first-child {
+                cursor: pointer;
+
+                img {
+
+                    &:hover {
+                        box-shadow: 2px 2px 35px #9c9aa7;
+                        position: relative;
+                        top: -5px;
+                    }
+                }
+            }
+
+            &--rotated-right {
+                transform: rotate(5deg);
+            }
+
+            &--rotated-left {
+                transform: rotate(-5deg);
+            }
+        }
+
+        &__img {
+            border-radius: 10px;
+            margin: 5px;
+            opacity: 1;
+            transition: opacity .9s ease-in;
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+}

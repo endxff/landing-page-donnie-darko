@@ -1,0 +1,104 @@
+@use 'variaveis';
+
+.theories {
+    padding: 5.6vw 5.6vw 1vw 5.6vw;
+    min-height: 70vh;
+    background-color: black;
+
+    @media (max-width: 768px) {
+        max-width: 640px;
+    }
+
+    &__header {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+
+        h3 {
+            text-align: center;
+            margin: 16px;
+        }
+
+        &__img {
+            height: 60vh;
+            position: absolute;
+            opacity: 0.09;
+
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        width: 60vw;
+        margin: 0 auto;
+        margin-top: 1em;
+        height: 46px;
+
+        @media (max-width: 768px) {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            margin-top: 0;
+            width: 90vw;
+            padding-bottom: 8px;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            :nth-child(2) {
+                @media (max-width: 768px) {
+                    margin: 0 1em;
+                }
+            }
+        }
+        
+        &__button {
+            color: variaveis.$colorNeutral;
+            width: 307px;
+            font-size: 24px;
+            font-weight: 400;
+            padding-bottom: 3em;
+            background-color: transparent;
+            text-transform: uppercase;
+            border: none;
+            z-index: 1000;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                text-align: left;
+                text-wrap: nowrap;
+                padding-bottom: 0;
+            }
+            
+            
+            
+            &--isActive {
+                color: variaveis.$colorHighlight;
+                border-bottom: 3px solid variaveis.$colorHighlight;
+            }
+    
+            &:hover {
+                color: variaveis.$colorHighlight;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item {
+        margin: 5em auto 1em;
+        width: 70vw;
+        text-align: justify;
+        display: none;
+
+        @media (max-width: 768px) {
+            margin: 2em auto;
+        }
+        
+        &--isActive {
+            display: block;
+        }
+    }
+}

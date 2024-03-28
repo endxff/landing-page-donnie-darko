@@ -1,0 +1,43 @@
+@use 'variaveis';
+@use 'header';
+@use 'hero';
+@use 'casting';
+@use 'theories';
+@use 'watch';
+@use 'footer';
+@use 'scrollTop';
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ojuju", sans-serif;
+}
+
+.title {
+    color: variaveis.$colorNeutral;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+
+.text {
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: variaveis.$colorNeutral;
+    
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}

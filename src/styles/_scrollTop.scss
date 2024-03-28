@@ -1,0 +1,17 @@
+.scrollTop {
+    visibility: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+
+    img {
+        width: 20px;
+    }
+    @media (max-width: 768px) {
+        &--isActive {
+            visibility: visible;
+        }
+    }
+}

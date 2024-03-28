@@ -1,0 +1,35 @@
+@use 'variaveis';
+
+.watch {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1vw 5.6vw 5.6vw 5.6vw;
+    min-height: 20vh;
+    background-color: black;
+    margin: 0 auto;
+    
+    &__content {
+
+        h3 {
+            margin-bottom: 1em;
+        }
+
+        &__links {
+            display: flex;
+            justify-content: space-evenly;
+            
+            img {
+                width: 4em;
+                border: 1px solid transparent;
+                border-radius: 20%;
+                transition: width .3s ease;
+
+                &:hover {
+                    width: 4.3em;
+                    transition: width .3s ease;
+                }
+            }
+        }
+    }
+}
