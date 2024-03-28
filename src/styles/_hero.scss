@@ -3,12 +3,12 @@
 .hero {
     padding: 5.6vw;
     min-height: 80vh;
-    background-image: url(../../dist/images/image-hero.png);
+    background-image: url(../../src/images/image-hero.png);
     background-size: cover;
     margin-top: -100px;
 
     @media (max-width: 768px) {
-        background-image: url(../../dist/images/image-hero-mobile.png);
+        background-image: url(../../src/images/image-hero-mobile.png);
         background-repeat: no-repeat;
     }
 
